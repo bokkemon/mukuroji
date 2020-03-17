@@ -1,0 +1,301 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ベース*/
+html,body,p,nav,ul,li,table,h1,h2,header,article,div,img,p,a,footer,tr,th,td,label,form,input,button,option,textarea{
+	margin: 0;
+	padding:0;
+	font-size: 1em;
+}
+*{
+  box-sizing:border-box;
+}
+body{
+	color:#333;	
+}
+h1{
+	text-align: center;
+	margin-bottom:20px;
+	
+	font-size:1.5em;
+}
+h2{
+	padding-top: 10px;
+	padding-bottom:20px;
+	font-size:1.2em;
+}
+.underline{
+	color:#003300;
+	border-bottom: double 3px #009900;
+	font-size: 120%;
+}
+.clearfix::after{
+	content:"";
+	display: block;
+	clear:both;
+}
+
+a{	
+	color:#333;
+	text-decoration:none;
+}
+a:hover{
+	text-decoration: underline;
+}
+.main-wrapper{
+	width: 90%;
+	max-width: 1024px;
+	margin:10px auto 60px auto;
+}
+p{
+	line-height: 1.6;
+}
+.bc-hf{
+	background-color:rgb(236,236,236);
+}
+.bc:nth-of-type(odd){
+	background-color: #CCFFCC;
+	padding:10px 0 5px 0;
+}
+/* ヘッダー*/
+ul{
+	list-style-type:none;
+	padding-left:0;
+}
+nav ul{
+	padding:26px 0 5px 0;
+	margin:0;
+	text-align: right;
+}
+nav li{
+	display:inline;
+	padding:0 8px;
+}
+header img{
+	float:left;
+}
+.header-in{
+	width:1024px;
+	margin-left:auto;
+	margin-right:auto;
+	padding-top:10px;
+}
+.nav{
+	float: left;
+}
+
+/* top */
+
+.main-wrapper .myslider img{
+	display: block;
+	margin: 0 auto;
+}
+
+
+/* ムクロジの杜とは */
+.mukuroji-annai{
+	padding:0 10px;
+	margin-bottom:40px;
+}
+.mukuroji-annai img{
+	display:block;
+	margin: 0 auto;
+}
+.mukuroji-annai p{
+	width:640px;
+	padding-top: 20px;
+	margin: 0 auto;	
+}
+
+
+/* 間取り */
+
+.madori-ba{
+	width:100%;
+}
+.madori{
+	float:left;
+	width: 50%;
+}
+.madori img{
+	display:block;
+	margin:0 auto;
+}
+.madori h2{
+	text-align: center;
+}
+/* 施設案内 */
+.shisetsu{
+	width:50%;
+	height: 450px;
+	float: left;
+}
+.shisetsu img{
+	width: 80%;
+	display: block;
+	margin:0 auto;
+}
+.shisetsu h2,.shisetsu p{
+	width: 80%;
+	margin:0 auto;	
+}
+.shisetsu h2{
+	text-align: center;
+}
+
+/* アクセス*/
+.map{
+	text-align: center;
+}
+
+/* お問い合わせ */
+form {
+	margin: 0 auto;
+	padding: 10px;
+	width: 500px;
+}
+input{
+	display:block;
+	width: 300px;
+	border: 1px solid #000;
+}
+textarea{
+	display:block;
+	width: 450px;
+	height: 100px;
+	border: 1px solid #000;
+}
+button{
+	width:130px;
+	padding:10px;
+	margin:5px 0;
+}
+
+/* footer */
+.footer-wrapper{
+	width:818px;
+	margin:0 auto;
+	padding:  40px;
+}
+.footer-gaiyou{
+	float: left;
+	margin-left: 50px;
+}
+.footer-menu{
+	float: right;
+	margin-right: 100px;
+}
+
+/*  村松追記分 戻るボタン */
+.return{
+background-color:#00CC00;
+width:80px;
+height:80px;
+border-radius:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+position:fixed;
+right:10px;
+bottom:10px;;
+}
+
+a.return_link{
+color:#fff;
+text-decoration:none;
+}
+
+
+/* 480px以下の場合 */
+@media(max-width: 480px) {
+
+	/* header */
+	header img{
+		float: none;
+	}
+	nav ul{
+		text-align: left;
+		padding: 0;
+	}
+	nav ul li{
+		padding:0 8px;
+	}
+	.header-in{
+		width:auto;
+	}
+	
+
+	/* 全体 */
+	body{
+		font-size: 70%;
+	}
+	article{
+		width:auto;
+		padding: 0 10px;
+	}
+	header,footer{
+		width:auto;
+	}
+	/* top */
+	.myslider img{
+		max-width: 100%;
+		height: auto;
+	}
+
+	/* ムクロジの杜とは */
+	.mukuroji-annai{
+		width:100%;
+		margin-bottom: 40px;
+	}
+	.mukuroji-annai img{
+		text-align:center;
+		max-width: 100%;
+		height: auto;
+	}
+	.mukuroji-annai p{
+		width:100%;
+		margin: 0 auto;
+	}
+
+	/* 間取り */
+	.madori{
+		float:none;
+		margin-bottom: 50px;
+		padding-top: 20px;
+		margin: 0 auto;
+	}
+	.madori img{
+		max-width: 100%;
+		height: auto;
+		text-align: center;
+	}
+	.madori h2{
+		text-align: center;
+	}
+	/* アクセス */
+	iframe{
+		max-width: 100%;
+	}
+
+	/* お問い合わせ */
+	
+	form,input,textarea{
+		width: 250px;
+	}
+	form{
+		margin:0 auto;
+	}
+
+	/* footer */
+	.footer-wrapper{
+		width: auto;
+	}
+	.footer-gaiyou,.footer-menu{
+		float:none;
+		margin:0 auto;
+		text-align: center;
+	}
+	.footer-gaiyou{
+		margin-bottom: 30px;
+	}
+}
